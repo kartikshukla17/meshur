@@ -4,6 +4,7 @@ import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo";
 import { BackButton } from "@/components/atoms/BackButton";
 import { CartClient } from "./CartClient";
+import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -49,6 +50,10 @@ export default async function CartPage({ params }: CartPageProps) {
         url={`/${locale}/cart`}
       />
       <div className="container mx-auto px-4 py-8">
+        {/* Language Switcher - Fixed position top right */}
+        <div className="fixed right-4 top-4 z-50 lg:right-8 lg:top-8">
+          <LanguageSwitcher currentLocale={locale} />
+        </div>
         <div className="mb-6">
           <BackButton href={`/${locale}`} label={dict.nav.home} variant="secondary" />
         </div>

@@ -11,6 +11,7 @@ import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import { formatString } from "@/lib/i18n";
 import { useCartStore, useIsInCart, useFavoritesStore, useIsFavorite } from "@/store";
+import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
 interface ProductDetailContentProps {
@@ -56,6 +57,10 @@ export const ProductDetailContent = memo(function ProductDetailContent({
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Language Switcher - Fixed position top right */}
+      <div className="fixed right-4 top-4 z-50 lg:right-8 lg:top-8">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
       <div className="container mx-auto px-4 py-6 lg:px-8 lg:py-8">
         {/* Back Button */}
         <div className="mb-6">

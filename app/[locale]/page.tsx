@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/seo";
 import { HomeHero } from "./HomeHero";
 import { HomeProducts } from "./HomeProducts";
 import { HomeProductsLoading } from "./HomeProductsLoading";
+import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -56,6 +57,10 @@ export default async function Home({ params }: HomePageProps) {
         type="website"
         url={`/${locale}`}
       />
+      {/* Language Switcher - Fixed position top right */}
+      <div className="fixed right-4 top-4 z-50 lg:right-8 lg:top-8">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
       <HomeHero dict={dict} locale={locale} />
       <Suspense fallback={<HomeProductsLoading />}>
         <HomeProducts
