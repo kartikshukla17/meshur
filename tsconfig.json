@@ -32,14 +32,15 @@
     "jest.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
   "exclude": [
     "node_modules",
     "stories",
     "vitest.config.ts",
-    "vitest.shims.d.ts"
+    "vitest.shims.d.ts",
+    ".next",
+    "dist",
+    "build"
   ]
 }

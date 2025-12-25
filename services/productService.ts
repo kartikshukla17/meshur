@@ -2,19 +2,18 @@
  * Product Service
  * Handles product data fetching and transformation
  * Separates API concerns from components
+ * Uses centralized API client for maintainable REST API integration
  */
 
-import type { ApiProduct, ApiResponse, ApiError } from "@/types/api";
+import type { ApiProduct, ApiResponse } from "@/types/api";
 import type {
   Product,
   ProductListParams,
   PaginatedResponse,
 } from "@/types/models";
-import { mapProduct, mapProducts } from "@/lib/mappers";
+import { mapProducts } from "@/lib/mappers";
 import { formatPrice, calculateDiscountedPrice } from "@/lib/formatters";
-import type { Product } from "@/types/models";
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.meshur.co";
+import { apiGet, CACHE_CONFIG } from "@/lib/api-client";
 
 /**
  * Fetch products from API or mock data
@@ -53,45 +52,19 @@ async function fetchProductsFromAPI(
     };
   }
 
-  // Production API call following REST API structure
+  // Production API call using centralized API client
   // Endpoint: GET /api/products
-  const searchParams = new URLSearchParams();
-  if (params.page) searchParams.set("page", params.page.toString());
-  if (params.limit) searchParams.set("limit", params.limit.toString());
-  if (params.category) searchParams.set("category", params.category);
-  if (params.search) searchParams.set("search", params.search);
-  if (params.sortBy) searchParams.set("sortBy", params.sortBy);
-  if (params.order) searchParams.set("order", params.order);
-
-  const response = await fetch(
-    `${API_BASE_URL}/api/products?${searchParams.toString()}`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-        // Add authorization header if needed
-        // "Authorization": `Bearer ${token}`,
-      },
-      // Next.js fetch caching options
-      // 'force-cache': Cache indefinitely (SSG)
-      // 'no-store': Always fetch fresh (SSR)
-      // 'no-cache': Revalidate on each request
-      // Default: Cache with revalidation (ISR)
-      next: {
-        revalidate: 60, // Revalidate every 60 seconds (ISR)
-      },
-    }
-  );
-
-  if (!response.ok) {
-    const error: ApiError = await response.json().catch(() => ({
-      error: "Unknown Error",
-      message: response.statusText,
-      statusCode: response.status,
-    }));
-    throw new Error(`Failed to fetch products: ${error.message || response.statusText}`);
-  }
-
-  return response.json();
+  return apiGet<ApiProduct[]>("/api/products", {
+    params: {
+      page: params.page,
+      limit: params.limit,
+      category: params.category,
+      search: params.search,
+      sortBy: params.sortBy,
+      order: params.order,
+    },
+    cache: CACHE_CONFIG.DYNAMIC, // Revalidate every 60 seconds (ISR)
+  });
 }
 
 /**
@@ -191,29 +164,11 @@ export async function getProductById(id: string): Promise<Product> {
       return mapProductDetail(apiResponse.data);
     }
 
-    // Production API call
-    const response = await fetch(`${API_BASE_URL}/api/products/${id}`, {
-      headers: {
-        "Content-Type": "application/json",
-        // Add authorization header if needed
-        // "Authorization": `Bearer ${token}`,
-      },
-      // Cache product details for 5 minutes (ISR)
-      next: {
-        revalidate: 300,
-      },
+    // Production API call using centralized API client
+    const apiResponse = await apiGet<ApiProduct>(`/api/products/${id}`, {
+      cache: CACHE_CONFIG.PRODUCT_DETAIL, // Cache for 5 minutes (ISR)
     });
 
-    if (!response.ok) {
-      const error: ApiError = await response.json().catch(() => ({
-        error: "Unknown Error",
-        message: response.statusText,
-        statusCode: response.status,
-      }));
-      throw new Error(`Failed to fetch product: ${error.message || response.statusText}`);
-    }
-
-    const apiResponse: ApiResponse<ApiProduct> = await response.json();
     return mapProductDetail(apiResponse.data);
   } catch (error) {
     console.error(`Error fetching product ${id}:`, error);

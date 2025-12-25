@@ -112,10 +112,14 @@ describe('productService', () => {
       const result = await getProducts()
 
       expect(result.items).toHaveLength(2)
-      expect(result.items[0]).toHaveProperty('id')
-      expect(result.items[0]).toHaveProperty('title')
-      expect(result.items[0]).toHaveProperty('price')
-      expect(result.items[0].price).toMatch(/\$/)
+      const firstProduct = result.items[0]
+      expect(firstProduct).toBeDefined()
+      if (firstProduct) {
+        expect(firstProduct).toHaveProperty('id')
+        expect(firstProduct).toHaveProperty('title')
+        expect(firstProduct).toHaveProperty('price')
+        expect(firstProduct.price).toMatch(/\$/)
+      }
     })
 
     it('returns pagination metadata', async () => {

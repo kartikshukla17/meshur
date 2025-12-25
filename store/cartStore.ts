@@ -92,7 +92,28 @@ export const useCartStore = create<CartStore>()(
         set((state) => {
           if (quantity <= 0) {
             // If quantity is 0 or less, remove from cart
-            return state.removeFromCart(productId);
+            if (!state.items.has(productId)) {
+              return state;
+            }
+
+            const newItems = new Map(state.items);
+            newItems.delete(productId);
+
+            // Calculate total items
+            let totalItems = 0;
+            newItems.forEach((qty) => {
+              totalItems += qty;
+            });
+
+            // Remove from addedAt
+            const newAddedAt = { ...state.addedAt };
+            delete newAddedAt[productId];
+
+            return {
+              items: newItems,
+              addedAt: newAddedAt,
+              totalItems,
+            };
           }
 
           const newItems = new Map(state.items);

@@ -9,7 +9,6 @@ import { Badge } from "@/components/atoms/Badge";
 import type { Product } from "@/types/models";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
-import { formatString } from "@/lib/i18n";
 import { useCartStore, useIsInCart, useFavoritesStore, useIsFavorite } from "@/store";
 import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
 import { cn } from "@/lib/utils";

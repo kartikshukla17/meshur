@@ -553,6 +553,15 @@ The structure supports i18n with:
 
 ## 📚 API Integration
 
+### Centralized API Client
+
+The application uses a centralized API client (`lib/api-client.ts`) for all REST API calls:
+
+- **Consistent Error Handling**: Standardized error responses with `ApiClientError`
+- **Type Safety**: Full TypeScript support for all API calls
+- **Caching Strategies**: Pre-configured cache options (STATIC, DYNAMIC, REALTIME, PRODUCT_DETAIL)
+- **Request/Response Standardization**: Uniform API interface with `apiGet`, `apiPost`, `apiPut`, `apiDelete`
+
 ### Base URL
 
 ```typescript
@@ -568,9 +577,17 @@ NEXT_PUBLIC_API_URL=https://api.meshur.co
 NEXT_PUBLIC_SITE_URL=https://meshur.co
 ```
 
+### API Data Modeling
+
+All API data structures are modeled based on https://api.meshur.co/docs:
+
+- **API Types** (`types/api.ts`): Raw API response structures matching the REST API
+- **UI Models** (`types/models.ts`): Transformed, UI-ready data structures
+- **Mappers** (`lib/mappers.ts`): Transform API data to UI models
+
 ### Mock Data
 
-During development, the app uses mock JSON files from `/mocks`. In production, it automatically switches to real API calls.
+During development, the app uses mock JSON files from `/mocks`. In production, it automatically switches to real API calls via the centralized API client.
 
 ## 🎨 Styling
 
@@ -631,10 +648,12 @@ During development, the app uses mock JSON files from `/mocks`. In production, i
 
 - `app/layout.tsx`: Root layout with SEO defaults
 - `services/productService.ts`: Product data fetching
+- `lib/api-client.ts`: Centralized REST API client
 - `store/favoritesStore.ts`: Global favorites state
 - `lib/mappers.ts`: API to UI transformation
-- `types/api.ts`: API response types
+- `types/api.ts`: API response types (based on https://api.meshur.co/docs)
 - `types/models.ts`: UI model types
+- `docs/ARCHITECTURE.md`: Comprehensive architecture documentation
 
 ## 🤝 Contributing
 
