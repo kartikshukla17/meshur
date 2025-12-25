@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "retry": "Yeniden Dene",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "add": "Ekle",
+    "remove": "Kaldır",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "clear": "Temizle",
+    "apply": "Uygula",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "submit": "Gönder",
+    "confirm": "Onayla"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "favorites": "Favoriler",
+    "categories": "Kategoriler",
+    "about": "Hakkında",
+    "contact": "İletişim"
+  },
+  "home": {
+    "title": "Meşhur Marketplace'e Hoş Geldiniz",
+    "subtitle": "Harika ürünler keşfedin ve güvenle alışveriş yapın. Kaliteli ürünlerden oluşan seçilmiş koleksiyonumuzu inceleyin.",
+    "browseProducts": "Ürünleri Görüntüle",
+    "myFavorites": "Favorilerim",
+    "featuredProducts": "Öne Çıkan Ürünler",
+    "newArrivals": "Yeni Gelenler",
+    "viewAll": "Tümünü Gör"
+  },
+  "products": {
+    "title": "Ürünler",
+    "description": "Geniş kaliteli ürün seçkimize göz atın",
+    "showing": "{total} ürünün {count} tanesi gösteriliyor",
+    "noProducts": "Ürün bulunamadı",
+    "addToCart": "Sepete Ekle",
+    "inCart": "Sepette",
+    "addToFavorites": "Favorilere ekle",
+    "removeFromFavorites": "Favorilerden çıkar",
+    "price": "Fiyat",
+    "stock": "Stok",
+    "available": "mevcut",
+    "rating": "Değerlendirme",
+    "reviews": "yorum",
+    "tags": "Etiketler",
+    "page": "Sayfa",
+    "of": "/"
+  },
+  "product": {
+    "title": "Ürün Detayları",
+    "description": "Ürün açıklaması",
+    "notFound": "Ürün Bulunamadı",
+    "notFoundDescription": "Aradığınız ürün bulunamadı",
+    "backToProducts": "Ürünlere Dön"
+  },
+  "favorites": {
+    "title": "Favorilerim",
+    "description": "Daha sonra için kaydettiğiniz ürünler",
+    "empty": "Henüz favori yok",
+    "emptyDescription": "Favorilerinizde görmek için ürün eklemeye başlayın",
+    "count": "Favorilerde {count} {count, plural, one {ürün} other {ürün}}",
+    "clearAll": "Tümünü Temizle",
+    "browseProducts": "Ürünleri Görüntüle"
+  },
+  "cart": {
+    "title": "Alışveriş Sepeti",
+    "description": "Ürünlerinizi gözden geçirin",
+    "empty": "Sepetiniz boş",
+    "emptyDescription": "Başlamak için sepete ürün ekleyin",
+    "count": "{count} {count, plural, one {ürün} other {ürün}}",
+    "clearAll": "Sepeti Temizle",
+    "browseProducts": "Ürünleri Görüntüle",
+    "summary": "Sipariş Özeti",
+    "subtotal": "Ara Toplam",
+    "shipping": "Kargo",
+    "calculatedAtCheckout": "Ödeme sırasında hesaplanır",
+    "total": "Toplam",
+    "checkout": "Ödemeye Geç"
+  },
+  "errors": {
+    "404": {
+      "title": "404 - Sayfa Bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil.",
+      "backHome": "Ana Sayfaya Dön"
+    },
+    "500": {
+      "title": "500 - Sunucu Hatası",
+      "description": "Sunucu tarafında bir sorun oluştu. Lütfen daha sonra tekrar deneyin.",
+      "tryAgain": "Tekrar Dene"
+    },
+    "generic": {
+      "title": "Bir şeyler yanlış gitti",
+      "description": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+      "reset": "Sıfırla"
+    }
+  },
+  "seo": {
+    "siteName": "Meşhur Marketplace",
+    "siteDescription": "Kaliteli ürünler için modern marketplace uygulaması. Güvenle alışveriş yapın ve harika fırsatlar keşfedin."
+  }
+}

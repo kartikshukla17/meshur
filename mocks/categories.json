@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": "cat_electronics",
+      "name": "Electronics",
+      "slug": "electronics",
+      "description": "Latest electronics and gadgets",
+      "image": "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "productCount": 156
+    },
+    {
+      "id": "cat_clothing",
+      "name": "Clothing",
+      "slug": "clothing",
+      "description": "Fashion and apparel for all occasions",
+      "image": "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "productCount": 234
+    },
+    {
+      "id": "cat_accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "description": "Essential accessories and lifestyle products",
+      "image": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "productCount": 189
+    },
+    {
+      "id": "cat_home",
+      "name": "Home & Living",
+      "slug": "home-living",
+      "description": "Furniture and home decor",
+      "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "productCount": 145
+    },
+    {
+      "id": "cat_sports",
+      "name": "Sports & Outdoors",
+      "slug": "sports-outdoors",
+      "description": "Sports equipment and outdoor gear",
+      "image": "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "productCount": 98
+    }
+  ],
+  "meta": {
+    "total": 5,
+    "page": 1,
+    "limit": 20,
+    "totalPages": 1
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "apply": "Apply",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "favorites": "Favorites",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome to Meshur Marketplace",
+    "subtitle": "Discover amazing products and shop with confidence. Browse our curated selection of quality items.",
+    "browseProducts": "Browse Products",
+    "myFavorites": "My Favorites",
+    "featuredProducts": "Featured Products",
+    "newArrivals": "New Arrivals",
+    "viewAll": "View All"
+  },
+  "products": {
+    "title": "Products",
+    "description": "Browse our wide selection of quality products",
+    "showing": "Showing {count} of {total} products",
+    "noProducts": "No products found",
+    "addToCart": "Add to Cart",
+    "inCart": "In Cart",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites",
+    "price": "Price",
+    "stock": "Stock",
+    "available": "available",
+    "rating": "Rating",
+    "reviews": "reviews",
+    "tags": "Tags",
+    "page": "Page",
+    "of": "of"
+  },
+  "product": {
+    "title": "Product Details",
+    "description": "Product description",
+    "notFound": "Product Not Found",
+    "notFoundDescription": "The product you are looking for could not be found",
+    "backToProducts": "Back to Products"
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "description": "Products you've saved for later",
+    "empty": "No favorites yet",
+    "emptyDescription": "Start adding products to your favorites to see them here",
+    "count": "{count} {count, plural, one {product} other {products}} in favorites",
+    "clearAll": "Clear All",
+    "browseProducts": "Browse Products"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "description": "Review your items",
+    "empty": "Your cart is empty",
+    "emptyDescription": "Add some products to your cart to get started",
+    "count": "{count} {count, plural, one {item} other {items}}",
+    "clearAll": "Clear Cart",
+    "browseProducts": "Browse Products",
+    "summary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "calculatedAtCheckout": "Calculated at checkout",
+    "total": "Total",
+    "checkout": "Proceed to Checkout"
+  },
+  "errors": {
+    "404": {
+      "title": "404 - Page Not Found",
+      "description": "The page you are looking for does not exist.",
+      "backHome": "Back to Home"
+    },
+    "500": {
+      "title": "500 - Server Error",
+      "description": "Something went wrong on our end. Please try again later.",
+      "tryAgain": "Try Again"
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "reset": "Reset"
+    }
+  },
+  "seo": {
+    "siteName": "Meshur Marketplace",
+    "siteDescription": "Modern marketplace application for quality products. Shop with confidence and discover amazing deals."
+  }
+}

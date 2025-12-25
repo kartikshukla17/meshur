@@ -1,0 +1,925 @@
+{
+  "data": [
+    {
+      "id": "prod_001",
+      "title": "Premium Wireless Headphones",
+      "description": "High-quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
+      "price": 299.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 45,
+      "rating": 4.8,
+      "reviewCount": 324,
+      "tags": ["wireless", "audio", "premium", "noise-cancelling"],
+      "isNew": true,
+      "isFeatured": true,
+      "discount": {
+        "percentage": 15,
+        "validUntil": "2024-12-31"
+      },
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-12-20T14:22:00Z"
+    },
+    {
+      "id": "prod_002",
+      "title": "Smart Fitness Watch",
+      "description": "Track your fitness goals with this advanced smartwatch featuring heart rate monitoring, GPS, and 7-day battery life.",
+      "price": 249.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_002",
+        "name": "FitTech Solutions",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 78,
+      "rating": 4.6,
+      "reviewCount": 189,
+      "tags": ["fitness", "smartwatch", "health", "wearable"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-11-20T09:15:00Z",
+      "updatedAt": "2024-12-18T11:45:00Z"
+    },
+    {
+      "id": "prod_003",
+      "title": "Organic Cotton T-Shirt",
+      "description": "Comfortable and sustainable organic cotton t-shirt. Available in multiple colors and sizes. Perfect for everyday wear.",
+      "price": 29.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_clothing",
+        "name": "Clothing",
+        "slug": "clothing"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 156,
+      "rating": 4.5,
+      "reviewCount": 92,
+      "tags": ["organic", "cotton", "sustainable", "casual"],
+      "isNew": true,
+      "isFeatured": false,
+      "discount": {
+        "percentage": 20,
+        "validUntil": "2024-12-25"
+      },
+      "createdAt": "2024-12-01T08:00:00Z",
+      "updatedAt": "2024-12-15T16:30:00Z"
+    },
+    {
+      "id": "prod_004",
+      "title": "Professional Camera Lens",
+      "description": "High-quality 50mm f/1.8 prime lens for DSLR cameras. Perfect for portrait photography with beautiful bokeh effects.",
+      "price": 449.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 23,
+      "rating": 4.9,
+      "reviewCount": 456,
+      "tags": ["camera", "lens", "photography", "professional"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-09-10T12:00:00Z",
+      "updatedAt": "2024-12-10T10:20:00Z"
+    },
+    {
+      "id": "prod_005",
+      "title": "Leather Backpack",
+      "description": "Stylish and durable leather backpack with multiple compartments. Perfect for work, travel, or everyday use.",
+      "price": 179.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_004",
+        "name": "LeatherCraft Co",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 34,
+      "rating": 4.7,
+      "reviewCount": 203,
+      "tags": ["leather", "backpack", "travel", "premium"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-10-05T14:30:00Z",
+      "updatedAt": "2024-12-12T09:15:00Z"
+    },
+    {
+      "id": "prod_006",
+      "title": "Stainless Steel Water Bottle",
+      "description": "Eco-friendly stainless steel water bottle with double-wall insulation. Keeps drinks cold for 24 hours or hot for 12 hours.",
+      "price": 34.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 201,
+      "rating": 4.4,
+      "reviewCount": 167,
+      "tags": ["eco-friendly", "water-bottle", "insulated", "sustainable"],
+      "isNew": true,
+      "isFeatured": false,
+      "createdAt": "2024-11-15T11:00:00Z",
+      "updatedAt": "2024-12-19T13:45:00Z"
+    },
+    {
+      "id": "prod_007",
+      "title": "Wireless Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker with 360-degree sound, waterproof design, and 20-hour battery life. Perfect for outdoor adventures and parties.",
+      "price": 89.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 67,
+      "rating": 4.7,
+      "reviewCount": 234,
+      "tags": ["bluetooth", "speaker", "portable", "waterproof"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-12-10T10:00:00Z",
+      "updatedAt": "2024-12-15T14:30:00Z"
+    },
+    {
+      "id": "prod_008",
+      "title": "Classic Denim Jeans",
+      "description": "Premium quality denim jeans with stretch comfort. Available in multiple sizes and washes. Perfect fit for everyday wear.",
+      "price": 79.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_clothing",
+        "name": "Clothing",
+        "slug": "clothing"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 124,
+      "rating": 4.6,
+      "reviewCount": 189,
+      "tags": ["denim", "jeans", "casual", "comfort"],
+      "isNew": true,
+      "isFeatured": false,
+      "discount": {
+        "percentage": 25,
+        "validUntil": "2024-12-31"
+      },
+      "createdAt": "2024-11-20T09:00:00Z",
+      "updatedAt": "2024-12-20T11:20:00Z"
+    },
+    {
+      "id": "prod_009",
+      "title": "Gaming Mechanical Keyboard",
+      "description": "RGB backlit mechanical keyboard with Cherry MX switches. Perfect for gaming and typing with customizable lighting effects.",
+      "price": 129.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 45,
+      "rating": 4.8,
+      "reviewCount": 312,
+      "tags": ["keyboard", "gaming", "mechanical", "rgb"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-10-15T12:00:00Z",
+      "updatedAt": "2024-12-10T16:00:00Z"
+    },
+    {
+      "id": "prod_010",
+      "title": "Designer Sunglasses",
+      "description": "UV protection sunglasses with polarized lenses. Stylish frame design suitable for all face shapes. Includes protective case.",
+      "price": 149.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_004",
+        "name": "LeatherCraft Co",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 89,
+      "rating": 4.5,
+      "reviewCount": 145,
+      "tags": ["sunglasses", "uv-protection", "polarized", "designer"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-09-25T14:00:00Z",
+      "updatedAt": "2024-12-12T10:15:00Z"
+    },
+    {
+      "id": "prod_011",
+      "title": "Yoga Mat Premium",
+      "description": "Non-slip yoga mat with extra cushioning. Eco-friendly material, easy to clean, and includes carrying strap. Perfect for all yoga styles.",
+      "price": 49.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_sports",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors"
+      },
+      "seller": {
+        "id": "seller_002",
+        "name": "FitTech Solutions",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 156,
+      "rating": 4.6,
+      "reviewCount": 278,
+      "tags": ["yoga", "fitness", "mat", "eco-friendly"],
+      "isNew": true,
+      "isFeatured": false,
+      "createdAt": "2024-10-10T08:00:00Z",
+      "updatedAt": "2024-12-18T13:00:00Z"
+    },
+    {
+      "id": "prod_012",
+      "title": "Smart Home Security Camera",
+      "description": "1080p HD security camera with night vision, motion detection, and mobile app control. Weatherproof design for indoor and outdoor use.",
+      "price": 199.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 34,
+      "rating": 4.7,
+      "reviewCount": 421,
+      "tags": ["security", "camera", "smart-home", "surveillance"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-11-05T11:00:00Z",
+      "updatedAt": "2024-12-14T09:30:00Z"
+    },
+    {
+      "id": "prod_013",
+      "title": "Cotton Hoodie",
+      "description": "Comfortable cotton blend hoodie with front pocket and adjustable drawstring hood. Perfect for casual wear in all seasons.",
+      "price": 59.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_clothing",
+        "name": "Clothing",
+        "slug": "clothing"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 203,
+      "rating": 4.5,
+      "reviewCount": 156,
+      "tags": ["hoodie", "cotton", "casual", "comfortable"],
+      "isNew": true,
+      "isFeatured": false,
+      "discount": {
+        "percentage": 15,
+        "validUntil": "2024-12-30"
+      },
+      "createdAt": "2024-11-25T10:00:00Z",
+      "updatedAt": "2024-12-19T15:00:00Z"
+    },
+    {
+      "id": "prod_014",
+      "title": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with precision tracking, long battery life, and silent clicks. Compatible with all operating systems.",
+      "price": 39.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 178,
+      "rating": 4.4,
+      "reviewCount": 267,
+      "tags": ["mouse", "wireless", "ergonomic", "computer"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-08-20T13:00:00Z",
+      "updatedAt": "2024-12-08T11:45:00Z"
+    },
+    {
+      "id": "prod_015",
+      "title": "Leather Wallet",
+      "description": "Genuine leather wallet with multiple card slots, cash compartment, and RFID blocking technology. Slim design fits comfortably in pocket.",
+      "price": 69.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_004",
+        "name": "LeatherCraft Co",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 92,
+      "rating": 4.8,
+      "reviewCount": 198,
+      "tags": ["wallet", "leather", "rfid-blocking", "premium"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-07-15T09:00:00Z",
+      "updatedAt": "2024-12-11T14:20:00Z"
+    },
+    {
+      "id": "prod_016",
+      "title": "Running Shoes",
+      "description": "Lightweight running shoes with cushioned sole and breathable mesh upper. Perfect for jogging, training, and everyday athletic activities.",
+      "price": 119.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_sports",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors"
+      },
+      "seller": {
+        "id": "seller_002",
+        "name": "FitTech Solutions",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 145,
+      "rating": 4.7,
+      "reviewCount": 389,
+      "tags": ["shoes", "running", "athletic", "comfortable"],
+      "isNew": true,
+      "isFeatured": true,
+      "createdAt": "2024-10-05T07:00:00Z",
+      "updatedAt": "2024-12-16T12:00:00Z"
+    },
+    {
+      "id": "prod_017",
+      "title": "Tablet Stand",
+      "description": "Adjustable aluminum tablet stand with multiple viewing angles. Compatible with all tablet sizes. Foldable design for easy storage.",
+      "price": 29.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 234,
+      "rating": 4.5,
+      "reviewCount": 123,
+      "tags": ["stand", "tablet", "adjustable", "aluminum"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-06-10T15:00:00Z",
+      "updatedAt": "2024-12-05T10:30:00Z"
+    },
+    {
+      "id": "prod_018",
+      "title": "Cotton Polo Shirt",
+      "description": "Classic polo shirt made from premium cotton. Available in multiple colors. Perfect for business casual or weekend wear.",
+      "price": 44.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_clothing",
+        "name": "Clothing",
+        "slug": "clothing"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 187,
+      "rating": 4.6,
+      "reviewCount": 201,
+      "tags": ["polo", "shirt", "cotton", "casual"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-05-20T11:00:00Z",
+      "updatedAt": "2024-12-09T13:15:00Z"
+    },
+    {
+      "id": "prod_019",
+      "title": "Portable Power Bank",
+      "description": "20000mAh high-capacity power bank with fast charging technology. Compatible with all smartphones and tablets. Includes USB-C and USB-A ports.",
+      "price": 54.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 112,
+      "rating": 4.6,
+      "reviewCount": 445,
+      "tags": ["power-bank", "charging", "portable", "battery"],
+      "isNew": true,
+      "isFeatured": true,
+      "createdAt": "2024-09-15T08:00:00Z",
+      "updatedAt": "2024-12-17T16:00:00Z"
+    },
+    {
+      "id": "prod_020",
+      "title": "Ceramic Coffee Mug Set",
+      "description": "Set of 4 ceramic coffee mugs with ergonomic handles. Dishwasher and microwave safe. Perfect for home or office use.",
+      "price": 24.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_home",
+        "name": "Home & Living",
+        "slug": "home-living"
+      },
+      "seller": {
+        "id": "seller_005",
+        "name": "Home Essentials",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 267,
+      "rating": 4.5,
+      "reviewCount": 178,
+      "tags": ["mugs", "ceramic", "coffee", "kitchen"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-04-12T10:00:00Z",
+      "updatedAt": "2024-12-06T09:00:00Z"
+    },
+    {
+      "id": "prod_021",
+      "title": "Wireless Earbuds",
+      "description": "True wireless earbuds with active noise cancellation, 8-hour battery life, and charging case. Perfect for music, calls, and workouts.",
+      "price": 149.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 78,
+      "rating": 4.8,
+      "reviewCount": 523,
+      "tags": ["earbuds", "wireless", "noise-cancelling", "audio"],
+      "isNew": true,
+      "isFeatured": true,
+      "createdAt": "2024-08-20T09:00:00Z",
+      "updatedAt": "2024-12-18T14:00:00Z"
+    },
+    {
+      "id": "prod_022",
+      "title": "Canvas Tote Bag",
+      "description": "Eco-friendly canvas tote bag with reinforced handles. Spacious design perfect for shopping, beach, or everyday use. Machine washable.",
+      "price": 19.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 312,
+      "rating": 4.4,
+      "reviewCount": 234,
+      "tags": ["tote-bag", "canvas", "eco-friendly", "reusable"],
+      "isNew": true,
+      "isFeatured": false,
+      "createdAt": "2024-07-25T12:00:00Z",
+      "updatedAt": "2024-12-13T11:00:00Z"
+    },
+    {
+      "id": "prod_023",
+      "title": "Dumbbell Set",
+      "description": "Adjustable dumbbell set with weight range from 5-25kg per dumbbell. Perfect for home workouts and strength training.",
+      "price": 199.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_sports",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors"
+      },
+      "seller": {
+        "id": "seller_002",
+        "name": "FitTech Solutions",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 56,
+      "rating": 4.7,
+      "reviewCount": 312,
+      "tags": ["dumbbells", "fitness", "weights", "home-gym"],
+      "isNew": false,
+      "isFeatured": true,
+      "createdAt": "2023-03-18T14:00:00Z",
+      "updatedAt": "2024-12-07T15:30:00Z"
+    },
+    {
+      "id": "prod_024",
+      "title": "Laptop Sleeve",
+      "description": "Protective laptop sleeve with padding and water-resistant exterior. Available in multiple sizes. Includes front pocket for accessories.",
+      "price": 34.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_004",
+        "name": "LeatherCraft Co",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 145,
+      "rating": 4.5,
+      "reviewCount": 189,
+      "tags": ["laptop", "sleeve", "protection", "water-resistant"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-02-10T11:00:00Z",
+      "updatedAt": "2024-12-04T10:00:00Z"
+    },
+    {
+      "id": "prod_025",
+      "title": "Cotton Dress Shirt",
+      "description": "Professional dress shirt made from premium cotton. Wrinkle-resistant fabric with classic collar. Perfect for business or formal occasions.",
+      "price": 64.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_clothing",
+        "name": "Clothing",
+        "slug": "clothing"
+      },
+      "seller": {
+        "id": "seller_003",
+        "name": "EcoWear",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 198,
+      "rating": 4.6,
+      "reviewCount": 267,
+      "tags": ["shirt", "dress-shirt", "formal", "business"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2023-01-15T09:00:00Z",
+      "updatedAt": "2024-12-03T12:00:00Z"
+    },
+    {
+      "id": "prod_026",
+      "title": "USB-C Hub",
+      "description": "Multi-port USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery. Compatible with MacBook, iPad, and Windows laptops.",
+      "price": 79.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_electronics",
+        "name": "Electronics",
+        "slug": "electronics"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 89,
+      "rating": 4.7,
+      "reviewCount": 356,
+      "tags": ["usb-c", "hub", "adapter", "computer"],
+      "isNew": true,
+      "isFeatured": true,
+      "createdAt": "2024-06-30T13:00:00Z",
+      "updatedAt": "2024-12-15T17:00:00Z"
+    },
+    {
+      "id": "prod_027",
+      "title": "Throw Pillow Set",
+      "description": "Set of 2 decorative throw pillows with premium covers. Machine washable and available in various patterns. Perfect for home decor.",
+      "price": 39.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_home",
+        "name": "Home & Living",
+        "slug": "home-living"
+      },
+      "seller": {
+        "id": "seller_005",
+        "name": "Home Essentials",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 223,
+      "rating": 4.5,
+      "reviewCount": 145,
+      "tags": ["pillows", "home-decor", "decorative", "comfort"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2022-12-20T10:00:00Z",
+      "updatedAt": "2024-12-02T09:00:00Z"
+    },
+    {
+      "id": "prod_028",
+      "title": "Basketball",
+      "description": "Official size basketball with premium composite leather. Perfect grip and bounce for indoor and outdoor play. Includes air pump.",
+      "price": 29.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_sports",
+        "name": "Sports & Outdoors",
+        "slug": "sports-outdoors"
+      },
+      "seller": {
+        "id": "seller_002",
+        "name": "FitTech Solutions",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 178,
+      "rating": 4.6,
+      "reviewCount": 234,
+      "tags": ["basketball", "sports", "outdoor", "indoor"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2022-11-25T08:00:00Z",
+      "updatedAt": "2024-12-01T14:00:00Z"
+    },
+    {
+      "id": "prod_029",
+      "title": "Leather Belt",
+      "description": "Genuine leather belt with classic buckle design. Adjustable sizing with multiple holes. Available in black and brown.",
+      "price": 49.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_004",
+        "name": "LeatherCraft Co",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 134,
+      "rating": 4.7,
+      "reviewCount": 178,
+      "tags": ["belt", "leather", "accessories", "fashion"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2022-10-30T12:00:00Z",
+      "updatedAt": "2024-11-30T11:00:00Z"
+    },
+    {
+      "id": "prod_030",
+      "title": "Desk Lamp",
+      "description": "LED desk lamp with adjustable brightness and color temperature. USB charging port and touch controls. Perfect for work or study.",
+      "price": 69.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_home",
+        "name": "Home & Living",
+        "slug": "home-living"
+      },
+      "seller": {
+        "id": "seller_005",
+        "name": "Home Essentials",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 156,
+      "rating": 4.6,
+      "reviewCount": 289,
+      "tags": ["lamp", "led", "desk", "lighting"],
+      "isNew": true,
+      "isFeatured": true,
+      "createdAt": "2024-05-15T10:00:00Z",
+      "updatedAt": "2024-12-14T13:00:00Z"
+    },
+    {
+      "id": "prod_031",
+      "title": "Smartphone Case",
+      "description": "Protective smartphone case with shock absorption and raised edges. Compatible with wireless charging. Available for multiple phone models.",
+      "price": 24.99,
+      "currency": "USD",
+      "images": [
+        "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/163117/keyboard-full-hands-typing-laptop-163117.jpeg?auto=compress&cs=tinysrgb&w=800"
+      ],
+      "category": {
+        "id": "cat_accessories",
+        "name": "Accessories",
+        "slug": "accessories"
+      },
+      "seller": {
+        "id": "seller_001",
+        "name": "TechStore Pro",
+        "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200"
+      },
+      "stock": 289,
+      "rating": 4.5,
+      "reviewCount": 456,
+      "tags": ["phone-case", "protection", "smartphone", "accessories"],
+      "isNew": false,
+      "isFeatured": false,
+      "createdAt": "2022-09-18T14:00:00Z",
+      "updatedAt": "2024-11-29T10:00:00Z"
+    }
+  ],
+  "meta": {
+    "total": 31,
+    "page": 1,
+    "limit": 20,
+    "totalPages": 2
+  }
+}

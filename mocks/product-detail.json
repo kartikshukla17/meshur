@@ -1,0 +1,45 @@
+{
+  "data": {
+    "id": "prod_001",
+    "title": "Premium Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals. Features include:\n\n- Active noise cancellation technology\n- 30-hour battery life with quick charge\n- Premium sound quality with deep bass\n- Comfortable over-ear design\n- Bluetooth 5.0 connectivity\n- Built-in microphone for calls",
+    "price": 299.99,
+    "currency": "USD",
+    "images": [
+      "https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1649770/pexels-photo-1649770.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1649769/pexels-photo-1649769.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    "category": {
+      "id": "cat_electronics",
+      "name": "Electronics",
+      "slug": "electronics"
+    },
+    "seller": {
+      "id": "seller_001",
+      "name": "TechStore Pro",
+      "avatar": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200",
+      "rating": 4.9,
+      "totalSales": 1234
+    },
+    "stock": 45,
+    "rating": 4.8,
+    "reviewCount": 324,
+    "tags": ["wireless", "audio", "premium", "noise-cancelling"],
+    "isNew": true,
+    "isFeatured": true,
+    "discount": {
+      "percentage": 15,
+      "validUntil": "2024-12-31"
+    },
+    "specifications": {
+      "battery": "30 hours",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "250g",
+      "color": "Black, Silver, Blue"
+    },
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-12-20T14:22:00Z"
+  }
+}
