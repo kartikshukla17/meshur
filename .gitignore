@@ -1,15 +1,12 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 bun.lockb
@@ -40,29 +37,27 @@ Desktop.ini
 $RECYCLE.BIN/
 *.lnk
 
-# testing
-/coverage
-/.nyc_output
-/.jest
+# Testing
+coverage/
+.nyc_output/
+.jest/
 *.test.js.snap
 .jest-cache/
 test-results/
 playwright-report/
 playwright/.cache/
 
-# next.js
-/.next/
-/out/
+# Next.js
 .next/
 out/
+.next/cache
 
-# production
-/build
-/dist
-/.turbo
+# Production builds
+build/
+dist/
 .turbo/
 
-# misc
+# Misc
 *.pem
 *.log
 *.tmp
@@ -73,15 +68,14 @@ out/
 *.seed
 *.pid.lock
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 lerna-debug.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Environment variables
 .env
 .env*.local
 .env.development.local
@@ -89,18 +83,17 @@ lerna-debug.log*
 .env.production.local
 .env.local
 
-# vercel
-.vercel
+# Vercel
 .vercel/
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 tsconfig.tsbuildinfo
 
 # Storybook
 *storybook.log
-storybook-static
+storybook-static/
 .storybook-out/
 .storybook-static/
 
@@ -111,126 +104,8 @@ storybook-static
 # Prettier
 .prettiercache
 
-# Turborepo
-.turbo
-
-# Vercel
-.vercel
-
-# PWA files
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
-**/public/sw.js.map
-**/public/workbox-*.js.map
-**/public/worker-*.js.map
-
 # Sentry
 .sentryclirc
 
 # Local development
-.local
 .local/
-
-# Temporary files
-*.bak
-*.backup
-*.old
-*.orig
-*.save
-
-# Build artifacts
-*.map
-*.min.js
-*.min.css
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-.nyc_output/
-
-# Dependency directories
-jspm_packages/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# parcel-bundler cache
-.parcel-cache
-
-# Next.js cache
-.next/cache
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
-
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
-
-# MacOS
-.AppleDouble
-.LSOverride
-Icon
-
-# Windows
-[Dd]esktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
