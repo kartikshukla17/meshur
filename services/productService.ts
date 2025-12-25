@@ -11,6 +11,8 @@ import type {
   PaginatedResponse,
 } from "@/types/models";
 import { mapProduct, mapProducts } from "@/lib/mappers";
+import { formatPrice, calculateDiscountedPrice } from "@/lib/formatters";
+import type { Product } from "@/types/models";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.meshur.co";
 
@@ -124,6 +126,59 @@ export async function getProducts(
 }
 
 /**
+ * Map product for detail page (full description, all images)
+ */
+function mapProductDetail(apiProduct: ApiProduct): Product {
+  const hasDiscount = !!apiProduct.discount;
+  const discountPercentage = apiProduct.discount?.percentage;
+  const finalPrice = hasDiscount
+    ? calculateDiscountedPrice(apiProduct.price, discountPercentage || 0)
+    : apiProduct.price;
+
+  // Determine badge
+  let badge: Product["badge"];
+  if (apiProduct.isNew) {
+    badge = { text: "New", variant: "success" };
+  } else if (hasDiscount && discountPercentage) {
+    badge = { text: `${discountPercentage}% Off`, variant: "error" };
+  } else if (apiProduct.isFeatured) {
+    badge = { text: "Featured", variant: "info" };
+  }
+
+  return {
+    id: apiProduct.id,
+    title: apiProduct.title,
+    description: apiProduct.description, // Full description for detail page
+    price: formatPrice(finalPrice, apiProduct.currency),
+    originalPrice: hasDiscount
+      ? formatPrice(apiProduct.price, apiProduct.currency)
+      : undefined,
+    imageUrl: apiProduct.images[0] || "/placeholder-product.jpg",
+    images: apiProduct.images.length > 0 ? apiProduct.images : undefined, // All images
+    imageAlt: `${apiProduct.title} product image`,
+    category: {
+      id: apiProduct.category.id,
+      name: apiProduct.category.name,
+      slug: apiProduct.category.slug,
+    },
+    seller: {
+      id: apiProduct.seller.id,
+      name: apiProduct.seller.name,
+      avatar: apiProduct.seller.avatar || undefined,
+    },
+    stock: apiProduct.stock,
+    rating: apiProduct.rating,
+    reviewCount: apiProduct.reviewCount,
+    tags: apiProduct.tags,
+    badge,
+    isNew: apiProduct.isNew || false,
+    isFeatured: apiProduct.isFeatured || false,
+    hasDiscount,
+    discountPercentage,
+  };
+}
+
+/**
  * Get single product by ID
  * Endpoint: GET /api/products/{id}
  */
@@ -133,7 +188,7 @@ export async function getProductById(id: string): Promise<Product> {
     if (process.env.NODE_ENV === "development" || !process.env.NEXT_PUBLIC_API_URL) {
       const mockData = await import("@/mocks/product-detail.json");
       const apiResponse = mockData.default as ApiResponse<ApiProduct>;
-      return mapProduct(apiResponse.data);
+      return mapProductDetail(apiResponse.data);
     }
 
     // Production API call
@@ -159,7 +214,7 @@ export async function getProductById(id: string): Promise<Product> {
     }
 
     const apiResponse: ApiResponse<ApiProduct> = await response.json();
-    return mapProduct(apiResponse.data);
+    return mapProductDetail(apiResponse.data);
   } catch (error) {
     console.error(`Error fetching product ${id}:`, error);
     throw error;

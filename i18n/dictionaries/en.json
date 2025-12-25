@@ -61,7 +61,10 @@
     "description": "Product description",
     "notFound": "Product Not Found",
     "notFoundDescription": "The product you are looking for could not be found",
-    "backToProducts": "Back to Products"
+    "backToProducts": "Back to Products",
+    "soldBy": "Sold by",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock"
   },
   "favorites": {
     "title": "My Favorites",

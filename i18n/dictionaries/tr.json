@@ -61,7 +61,10 @@
     "description": "Ürün açıklaması",
     "notFound": "Ürün Bulunamadı",
     "notFoundDescription": "Aradığınız ürün bulunamadı",
-    "backToProducts": "Ürünlere Dön"
+    "backToProducts": "Ürünlere Dön",
+    "soldBy": "Satıcı",
+    "inStock": "Stokta Var",
+    "outOfStock": "Stokta Yok"
   },
   "favorites": {
     "title": "Favorilerim",

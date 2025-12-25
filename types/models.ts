@@ -9,7 +9,8 @@ export interface Product {
   description: string;
   price: string; // Formatted price string
   originalPrice?: string;
-  imageUrl: string;
+  imageUrl: string; // Primary image (for cards/listings)
+  images?: string[]; // All product images (for detail page)
   imageAlt: string;
   category: {
     id: string;

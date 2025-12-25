@@ -40,6 +40,7 @@ export function mapProduct(apiProduct: ApiProduct): Product {
       ? formatPrice(apiProduct.price, apiProduct.currency)
       : undefined,
     imageUrl: apiProduct.images[0] || "/placeholder-product.jpg",
+    images: apiProduct.images.length > 0 ? apiProduct.images : undefined,
     imageAlt: `${apiProduct.title} product image`,
     category: {
       id: apiProduct.category.id,
