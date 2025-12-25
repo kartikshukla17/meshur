@@ -29,9 +29,10 @@ export function formatString(
   values: Record<string, string | number>
 ): string {
   let result = template;
-  
+
   // Handle ICU pluralization: {count, plural, one {singular} other {plural}}
-  const pluralRegex = /\{(\w+),\s*plural,\s*one\s+\{([^}]+)\}\s+other\s+\{([^}]+)\}\}/g;
+  const pluralRegex =
+    /\{(\w+),\s*plural,\s*one\s+\{([^}]+)\}\s+other\s+\{([^}]+)\}\}/g;
   result = result.replace(pluralRegex, (match, varName, singular, plural) => {
     const count = values[varName];
     if (count !== undefined) {
@@ -40,12 +41,12 @@ export function formatString(
     }
     return match;
   });
-  
+
   // Replace simple variables: {variable}
   for (const [key, value] of Object.entries(values)) {
     result = result.replace(new RegExp(`\\{${key}\\}`, "g"), String(value));
   }
-  
+
   return result;
 }
 

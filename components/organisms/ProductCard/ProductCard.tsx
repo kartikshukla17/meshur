@@ -9,7 +9,12 @@ import { Button } from "@/components/atoms/Button";
 import { Badge } from "@/components/atoms/Badge";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/types/models";
-import { useFavoritesStore, useIsFavorite, useCartStore, useIsInCart } from "@/store";
+import {
+  useFavoritesStore,
+  useIsFavorite,
+  useCartStore,
+  useIsInCart,
+} from "@/store";
 
 export interface ProductCardProps extends HTMLAttributes<HTMLDivElement> {
   product: Product;
@@ -59,7 +64,7 @@ function ProductCardComponent({
     (e: React.MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       if (useStoreCart) {
         // Use store to add to cart
         addToCart(product.id, 1);
@@ -75,7 +80,7 @@ function ProductCardComponent({
     (e: React.MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       if (useStoreCart) {
         // Use store to remove from cart
         removeFromCart(product.id);
@@ -107,7 +112,10 @@ function ProductCardComponent({
       {...props}
     >
       {/* Image Container with Overlay */}
-      <Link href={productUrl} className="relative block aspect-square w-full overflow-hidden bg-gradient-to-br from-[#f9fafb] to-[#f3f4f6]">
+      <Link
+        href={productUrl}
+        className="relative block aspect-square w-full overflow-hidden bg-gradient-to-br from-[#f9fafb] to-[#f3f4f6]"
+      >
         <Image
           src={product.imageUrl}
           alt={product.imageAlt}
@@ -119,7 +127,7 @@ function ProductCardComponent({
         />
         {/* Subtle overlay on hover for better focus */}
         <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/5" />
-        
+
         {/* Badge - Top Left */}
         {product.badge && (
           <div className="absolute left-3 top-3 z-10">

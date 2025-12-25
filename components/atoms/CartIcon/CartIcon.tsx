@@ -50,4 +50,3 @@ export function CartIcon({ href, className }: CartIconProps) {
     </Link>
   );
 }
-

@@ -6,10 +6,16 @@ import Link from "next/link";
 import { BackButton } from "@/components/atoms/BackButton";
 import { Button } from "@/components/atoms/Button";
 import { Badge } from "@/components/atoms/Badge";
+import { DarkModeToggle } from "@/components/atoms/DarkModeToggle";
 import type { Product } from "@/types/models";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
-import { useCartStore, useIsInCart, useFavoritesStore, useIsFavorite } from "@/store";
+import {
+  useCartStore,
+  useIsInCart,
+  useFavoritesStore,
+  useIsFavorite,
+} from "@/store";
 import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
@@ -37,9 +43,12 @@ export const ProductDetailContent = memo(function ProductDetailContent({
   const toggleFavorite = useFavoritesStore((state) => state.toggleFavorite);
 
   // Use product images array if available, otherwise use single image
-  const productImages = product.images && product.images.length > 0 
-    ? product.images 
-    : (product.imageUrl ? [product.imageUrl] : []);
+  const productImages =
+    product.images && product.images.length > 0
+      ? product.images
+      : product.imageUrl
+        ? [product.imageUrl]
+        : [];
   const currentImage = productImages[selectedImageIndex] || product.imageUrl;
 
   const handleAddToCart = () => {
@@ -56,8 +65,9 @@ export const ProductDetailContent = memo(function ProductDetailContent({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Language Switcher - Fixed position top right */}
-      <div className="fixed right-4 top-4 z-50 lg:right-8 lg:top-8">
+      {/* Language Switcher and Theme Toggle - Fixed position top right */}
+      <div className="fixed right-4 top-4 z-50 flex items-center gap-3 lg:right-8 lg:top-8">
+        <DarkModeToggle />
         <LanguageSwitcher currentLocale={locale} />
       </div>
       <div className="container mx-auto px-4 py-6 lg:px-8 lg:py-8">
@@ -103,7 +113,9 @@ export const ProductDetailContent = memo(function ProductDetailContent({
                   "active:scale-95",
                   isFavorite && "bg-white shadow-md"
                 )}
-                aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+                aria-label={
+                  isFavorite ? "Remove from favorites" : "Add to favorites"
+                }
                 aria-pressed={isFavorite}
                 type="button"
               >
@@ -191,7 +203,8 @@ export const ProductDetailContent = memo(function ProductDetailContent({
                 </div>
                 {product.reviewCount > 0 && (
                   <span className="text-sm text-[#6b7280]">
-                    ({product.reviewCount} {dict.products?.reviews || "reviews"})
+                    ({product.reviewCount} {dict.products?.reviews || "reviews"}
+                    )
                   </span>
                 )}
                 <div className="h-4 w-px bg-[#e5e7eb]" />

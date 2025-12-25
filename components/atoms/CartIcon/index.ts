@@ -1,2 +1,1 @@
 export { CartIcon } from "./CartIcon";
-

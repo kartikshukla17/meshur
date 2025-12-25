@@ -15,8 +15,7 @@ import type { ApiResponse, ApiError } from "@/types/api";
 /**
  * API Configuration
  */
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://api.meshur.co";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.meshur.co";
 
 /**
  * Default fetch options for Next.js
@@ -198,4 +197,3 @@ export async function apiDelete<T>(
  * Export API base URL for use in other modules if needed
  */
 export { API_BASE_URL };
-

@@ -484,6 +484,7 @@ npm run test:coverage
 #### Test Coverage
 
 Current test coverage includes:
+
 - ✅ Button component (variants, sizes, states, interactions)
 - ✅ ProductCard component (rendering, interactions, favorites)
 - ✅ Favorites store (add, remove, toggle, persistence)

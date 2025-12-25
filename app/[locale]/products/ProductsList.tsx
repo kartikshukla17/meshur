@@ -1,9 +1,22 @@
 "use client";
 
 import { memo } from "react";
-import { ProductCard } from "@/components/organisms/ProductCard";
+import dynamic from "next/dynamic";
 import type { Product } from "@/types/models";
 import type { Locale } from "@/i18n/config";
+
+// Lazy load ProductCard for code splitting
+// This reduces the initial bundle size for the products listing page
+const ProductCard = dynamic(
+  () =>
+    import("@/components/organisms/ProductCard").then((mod) => mod.ProductCard),
+  {
+    loading: () => (
+      <div className="h-96 animate-pulse rounded-lg bg-[#f3f4f6]" />
+    ),
+    ssr: true, // Still render on server for SEO
+  }
+);
 
 interface ProductsListProps {
   products: Product[];
@@ -12,8 +25,12 @@ interface ProductsListProps {
 
 /**
  * ProductsList Component
- * Memoized to prevent unnecessary re-renders
- * Only re-renders when products array changes
+ *
+ * Performance Optimizations:
+ * - Memoized to prevent unnecessary re-renders
+ * - Only re-renders when products array changes
+ * - Uses dynamic import for ProductCard (code splitting)
+ * - Lazy loads ProductCard component to reduce initial bundle size
  */
 export const ProductsList = memo(function ProductsList({
   products,

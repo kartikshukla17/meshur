@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/seo";
 import { BackButton } from "@/components/atoms/BackButton";
 import { CartClient } from "./CartClient";
 import { LanguageSwitcher } from "@/components/organisms/LanguageSwitcher";
+import { DarkModeToggle } from "@/components/atoms/DarkModeToggle";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -50,12 +51,17 @@ export default async function CartPage({ params }: CartPageProps) {
         url={`/${locale}/cart`}
       />
       <div className="container mx-auto px-4 py-8">
-        {/* Language Switcher - Fixed position top right */}
-        <div className="fixed right-4 top-4 z-50 lg:right-8 lg:top-8">
+        {/* Language Switcher and Theme Toggle - Fixed position top right */}
+        <div className="fixed right-4 top-4 z-50 flex items-center gap-3 lg:right-8 lg:top-8">
+          <DarkModeToggle />
           <LanguageSwitcher currentLocale={locale} />
         </div>
         <div className="mb-6">
-          <BackButton href={`/${locale}`} label={dict.nav.home} variant="secondary" />
+          <BackButton
+            href={`/${locale}`}
+            label={dict.nav.home}
+            variant="secondary"
+          />
         </div>
         <header className="mb-8">
           <h1 className="mb-2 text-4xl font-bold text-[#171717]">
@@ -87,4 +93,3 @@ function CartLoading() {
     </div>
   );
 }
-

@@ -24,21 +24,24 @@ async function fetchProductsFromAPI(
 ): Promise<ApiResponse<ApiProduct[]>> {
   // In development, use mock data with pagination
   // In production, this calls the actual REST API
-  if (process.env.NODE_ENV === "development" || !process.env.NEXT_PUBLIC_API_URL) {
+  if (
+    process.env.NODE_ENV === "development" ||
+    !process.env.NEXT_PUBLIC_API_URL
+  ) {
     const mockData = await import("@/mocks/products.json");
     const allProducts = mockData.default as ApiResponse<ApiProduct[]>;
-    
+
     // Apply pagination to mock data
     const page = params.page || 1;
     const limit = params.limit || 20;
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
     const paginatedProducts = allProducts.data.slice(startIndex, endIndex);
-    
+
     // Calculate pagination metadata
     const total = allProducts.data.length;
     const totalPages = Math.ceil(total / limit);
-    
+
     return {
       data: paginatedProducts,
       meta: {
@@ -158,7 +161,10 @@ function mapProductDetail(apiProduct: ApiProduct): Product {
 export async function getProductById(id: string): Promise<Product> {
   try {
     // In development, use mock data
-    if (process.env.NODE_ENV === "development" || !process.env.NEXT_PUBLIC_API_URL) {
+    if (
+      process.env.NODE_ENV === "development" ||
+      !process.env.NEXT_PUBLIC_API_URL
+    ) {
       const mockData = await import("@/mocks/product-detail.json");
       const apiResponse = mockData.default as ApiResponse<ApiProduct>;
       return mapProductDetail(apiResponse.data);

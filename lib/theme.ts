@@ -9,10 +9,16 @@ export function initTheme() {
   const root = document.documentElement;
 
   // Light theme is the primary/default theme
+  // Always default to light mode, only use dark if explicitly set
   if (theme === "dark") {
     root.classList.add("dark");
   } else {
+    // Explicitly ensure light mode
     root.classList.remove("dark");
+    // Set light mode as default if not set
+    if (!theme) {
+      localStorage.setItem("theme", "light");
+    }
   }
 }
 

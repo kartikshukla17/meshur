@@ -15,7 +15,10 @@ import { apiGet, CACHE_CONFIG } from "@/lib/api-client";
  */
 async function fetchCategoriesFromAPI(): Promise<ApiResponse<ApiCategory[]>> {
   // In development, use mock data
-  if (process.env.NODE_ENV === "development" || !process.env.NEXT_PUBLIC_API_URL) {
+  if (
+    process.env.NODE_ENV === "development" ||
+    !process.env.NEXT_PUBLIC_API_URL
+  ) {
     const mockData = await import("@/mocks/categories.json");
     return mockData.default as ApiResponse<ApiCategory[]>;
   }

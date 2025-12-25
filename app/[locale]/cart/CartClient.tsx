@@ -20,11 +20,7 @@ interface CartClientProps {
  * Client component for cart page
  * Uses Zustand store to filter and display cart items
  */
-export function CartClient({
-  allProducts,
-  dict,
-  locale,
-}: CartClientProps) {
+export function CartClient({ allProducts, dict, locale }: CartClientProps) {
   const cartItemIds = useCartStore((state) => state.getCartItemIds());
   const removeFromCart = useCartStore((state) => state.removeFromCart);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
@@ -41,9 +37,7 @@ export function CartClient({
     return cartProducts.reduce((sum, product) => {
       const quantity = useCartStore.getState().getQuantity(product.id);
       // Extract numeric price (remove currency symbols)
-      const price = parseFloat(
-        product.price.replace(/[^0-9.-]+/g, "") || "0"
-      );
+      const price = parseFloat(product.price.replace(/[^0-9.-]+/g, "") || "0");
       return sum + price * quantity;
     }, 0);
   }, [cartProducts]);
@@ -173,7 +167,10 @@ function CartItem({
 
   return (
     <div className="flex gap-4 rounded-xl border border-[#e5e7eb] bg-white p-4 shadow-sm">
-      <Link href={productUrl} className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-[#f9fafb]">
+      <Link
+        href={productUrl}
+        className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-[#f9fafb]"
+      >
         <Image
           src={product.imageUrl}
           alt={product.imageAlt}
@@ -193,9 +190,7 @@ function CartItem({
             <p className="mb-2 text-sm text-[#6b7280] line-clamp-2">
               {product.description}
             </p>
-            <p className="text-lg font-bold text-[#171717]">
-              {product.price}
-            </p>
+            <p className="text-lg font-bold text-[#171717]">{product.price}</p>
           </div>
           <button
             onClick={onRemove}
@@ -272,4 +267,3 @@ function CartItem({
     </div>
   );
 }
-

@@ -19,8 +19,7 @@ export function Card({
   ...props
 }: CardProps) {
   const variantStyles = {
-    default:
-      "bg-white border border-[#e5e7eb]",
+    default: "bg-white border border-[#e5e7eb]",
     outlined: "bg-transparent border-2 border-[#d1d5db]",
     elevated:
       "bg-white shadow-sm border border-[#e5e7eb] hover:shadow-md transition-all duration-300",

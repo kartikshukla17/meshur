@@ -53,7 +53,11 @@ export default function Error({ error, reset }: ErrorProps) {
             <Button onClick={reset} variant="primary">
               Try Again
             </Button>
-            <BackButton href={`/${locale}`} label="Go to Homepage" variant="secondary" />
+            <BackButton
+              href={`/${locale}`}
+              label="Go to Homepage"
+              variant="secondary"
+            />
           </div>
         </nav>
       </main>

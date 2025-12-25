@@ -169,10 +169,12 @@ export const useCartStore = create<CartStore>()(
       storage: createJSONStorage(() => localStorage),
       // Convert Map to Array for persistence
       partialize: (state): PersistedCartState => ({
-        items: Array.from(state.items.entries()).map(([productId, quantity]) => ({
-          productId,
-          quantity,
-        })),
+        items: Array.from(state.items.entries()).map(
+          ([productId, quantity]) => ({
+            productId,
+            quantity,
+          })
+        ),
         addedAt: state.addedAt,
         totalItems: state.totalItems,
       }),
@@ -192,4 +194,3 @@ export const useCartStore = create<CartStore>()(
     }
   )
 );
-

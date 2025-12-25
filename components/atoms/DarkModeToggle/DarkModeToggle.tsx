@@ -17,11 +17,25 @@ export function DarkModeToggle({ className }: DarkModeToggleProps) {
   const [mounted, setMounted] = useState(false);
 
   // Handle hydration - only set theme after component mounts
+  // Default to light mode if no theme is set
   useEffect(() => {
     setMounted(true);
     const root = document.documentElement;
     const theme = localStorage.getItem("theme");
-    const isDarkMode = theme === "dark" || root.classList.contains("dark");
+    // Only set dark mode if explicitly set to "dark", otherwise default to light
+    const isDarkMode = theme === "dark";
+
+    // Ensure light mode is the default
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+      // Set light mode in localStorage if not set
+      if (!theme) {
+        localStorage.setItem("theme", "light");
+      }
+    }
+
     setIsDark(isDarkMode);
   }, []);
 

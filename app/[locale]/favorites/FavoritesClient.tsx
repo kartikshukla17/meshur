@@ -55,9 +55,7 @@ export function FavoritesClient({
         <h2 className="mb-2 text-2xl font-semibold text-[#171717]">
           {dict.favorites.empty}
         </h2>
-        <p className="mb-6 text-[#6b7280]">
-          {dict.favorites.emptyDescription}
-        </p>
+        <p className="mb-6 text-[#6b7280]">{dict.favorites.emptyDescription}</p>
         <Button asChild variant="primary">
           <Link href={`/${locale}/products`}>
             {dict.favorites.browseProducts}

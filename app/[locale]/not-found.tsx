@@ -22,12 +22,13 @@ export default async function NotFound({ params }: NotFoundProps) {
         <h2 className="mb-4 text-2xl font-semibold text-[#171717]">
           {dict.errors["404"].title}
         </h2>
-        <p className="mb-8 text-[#6b7280]">
-          {dict.errors["404"].description}
-        </p>
-        <BackButton href={`/${locale}`} label={dict.errors["404"].backHome} variant="primary" />
+        <p className="mb-8 text-[#6b7280]">{dict.errors["404"].description}</p>
+        <BackButton
+          href={`/${locale}`}
+          label={dict.errors["404"].backHome}
+          variant="primary"
+        />
       </div>
     </div>
   );
 }
-

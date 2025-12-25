@@ -101,11 +101,17 @@ export default function RootLayout({
             __html: `
               (function() {
                 // Light theme is the primary/default theme
+                // Always default to light mode, only use dark if explicitly set
                 const theme = localStorage.getItem('theme');
                 if (theme === 'dark') {
                   document.documentElement.classList.add('dark');
                 } else {
+                  // Explicitly ensure light mode
                   document.documentElement.classList.remove('dark');
+                  // Set light mode as default if not set
+                  if (!theme) {
+                    localStorage.setItem('theme', 'light');
+                  }
                 }
               })();
             `,
